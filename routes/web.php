@@ -20,3 +20,12 @@ Route::get('/category', function () {
 });
 
 Route::get('/place', 'PageController@getName');
+
+Route::resource('posts','PostController');
+
+Route::get('/home', function() {
+    return view('homepage');
+});
+Route::get('/create-place', function() {
+    return view('place/createPlace');
+});
