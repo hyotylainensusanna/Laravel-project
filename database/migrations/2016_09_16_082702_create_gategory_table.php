@@ -16,8 +16,6 @@ class CreateGategoryTable extends Migration
         Schema::create('gategory', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->rememberToken();
-            $table->timestamps();
         });
     }
 

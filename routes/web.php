@@ -19,6 +19,4 @@ Route::get('/category', function () {
     return view('categorypage');
 });
 
-Route::get('/place', function () {
-    return view('placepage');
-});
+Route::get('/place', 'PageController@getName');
