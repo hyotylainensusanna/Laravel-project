@@ -10,7 +10,7 @@
         </div>
     </section>
 
-    <section>
+    <section class="text-center">
         <div class="row">
             <div class="col-md-6 square blue">
                 <h1>Newest places</h1>
@@ -30,7 +30,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="text-center">
         <div class="row">
             <div class="col-md-3">
                 <div class="row">
@@ -49,7 +49,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="text-center">
         <div class="row">
             <div class="col-md-6 square blue">
                 <h1>Old but gold</h1>
@@ -68,10 +68,17 @@
             </div>
         </div>
     </section>
-    <section class="contact text-center">
+    <section class="contact">
         <div class="row">
-            <div class="col-xs-12">
-                <h1>title</h1>
+            <div class="col-md-6 col-md-offset-3">
+                <h1 class="text-center">Contact us</h1>
+                {!! Form::open(array('route' => 'posts.store')) !!}
+                    {{ Form::label('title', 'Title: ') }}
+                    {{ Form::text('title', null, array('class' => 'form-control')) }}
+                    {{ Form::label('description', 'Description: ') }}
+                    {{ Form::textarea('description', null, array('class' => 'form-control')) }}
+                    {{ Form::submit('Submit', array('class' => 'btn btn-success btn-lg btn-block', 'style' => 'margin-top: 25px')) }}
+                {!! Form::close() !!}
             </div>
         </div>
     </section>

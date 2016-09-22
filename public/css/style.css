@@ -13,12 +13,26 @@ footer {
 .white {
     color: #fff;
 }
+.navbar-default {
+    border-radius: 0;
+    border: none;
+    margin-bottom: 0;
+    background-color: #0C3547;
+}
+.navbar-default .navbar-brand {
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    text-transform: uppercase;
+}
 .container-fluid {
     padding-left: 0;
     padding-right: 0;
 }
 .main-header {
-    height: 700px;
+    height: 600px;
     width: 100%;
     background-color: #81CFD1;
     background-repeat: no-repeat;
@@ -53,9 +67,28 @@ footer {
 }
 .contact {
     height: 500px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .place-header {
     background-color: #81CFD1;
 }
+.blog-content {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+p.blog-post {
+    font-size: 1.5em;
+}
+.square, .place-square {
+    padding-top: 8em;
+}
+.contact .form-control {
+    border-radius: 0;
+}
+.contact .form-control .btn-group-lg>.btn, .btn-lg {
+    border-radius: 0;
+}
+
 
 

@@ -1,6 +1,6 @@
 @extends('main')
 @section('content')
-    <section class="main-header category-header">
+    <section class="main-header category-header text-center">
         <div class="row">
             <div class="col-lg-12">
                 <h1>All blogposts</h1>
