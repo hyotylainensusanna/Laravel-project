@@ -1,5 +1,8 @@
+body {
+    color: #0C3547;
+}
 footer {
-    background-color: #000;
+    background-color: #0C3547;
     color: #fff;
     height: 300px;
 }
@@ -10,7 +13,7 @@ footer {
 .main-header {
     height: 700px;
     width: 100%;
-    background-color: #2ab27b;
+    background-color: #81CFD1;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -25,21 +28,21 @@ footer {
     color: #fff;
 }
 .blue {
-    background-color: darkblue;
+    background-color: #46A7AE;
 }
 .green {
-    background-color: #2ab27b;
+    background-color: #6E9399;
 }
 .place-square {
     height: 250px;
 }
 .gray {
-    background-color: #eee;
+    background-color: #DDDCE2;
 }
 .contact {
     height: 500px;
 }
 .place-header {
-    background-color: #eee;
+    background-color: #81CFD1;
 }
 

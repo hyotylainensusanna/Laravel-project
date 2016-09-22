@@ -1,4 +1,6 @@
-@include('partials.header')
+@extends('main')
+
+@section('content')
     <section class="main-header">
         <div class="row">
             <div class="col-lg-12">
@@ -10,7 +12,7 @@
     <section>
         <div class="row">
             <div class="col-md-6 square blue">
-                <h1>Gategory 1</h1>
+                <h1>Newest places</h1>
             </div>
             <div class="col-md-3">
                 <div class="row">
@@ -41,15 +43,15 @@
                     <div class="col-md-12 place-square gray">place4</div>
                 </div>
             </div>
-            <div class="col-md-6 square blue">
-                <h1>Gategory  2</h1>
+            <div class="col-md-6 square green">
+                <h1>Interesting places</h1>
             </div>
         </div>
     </section>
     <section>
         <div class="row">
             <div class="col-md-6 square blue">
-                <h1>Gategory 3</h1>
+                <h1>Old but gold</h1>
             </div>
             <div class="col-md-3">
                 <div class="row">
@@ -72,5 +74,4 @@
             </div>
         </div>
     </section>
-
-@include('partials.footer')
+@endsection
