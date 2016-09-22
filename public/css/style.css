@@ -10,6 +10,9 @@ footer {
 .strong {
     font-weight: bold;
 }
+.white {
+    color: #fff;
+}
 .container-fluid {
     padding-left: 0;
     padding-right: 0;
@@ -24,6 +27,11 @@ footer {
 .main-header h1 {
     color: #fff;
     font-size: 6em;
+    padding-top: 2em;
+}
+.main-header p.white {
+    font-size: 1.4em;
+    font-style: italic;
 }
 .square {
     height: 500px;

@@ -21,9 +21,9 @@ Route::get('/all', function () {
 
 Route::resource('posts','PostController');
 
-Route::get('/home', function() {
-    return view('welcome');
-});
 Route::get('/create', function() {
     return view('posts/create');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
