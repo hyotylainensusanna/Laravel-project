@@ -28,7 +28,6 @@
 
 </head>
 <body>
-
 <nav class="navbar navbar-default">
         <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -50,7 +49,6 @@
         </ul>
     </div><!-- /.navbar-collapse -->
 </nav>
-
 <div class="container-fluid">
     @yield('content')
 </div>

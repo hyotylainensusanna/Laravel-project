@@ -1,5 +1,6 @@
 body {
     color: #0C3547;
+    font-size: 1.6em;
 }
 footer {
     background-color: #0C3547;
@@ -88,7 +89,7 @@ p.blog-post {
     font-size: 1.5em;
 }
 .square, .place-square {
-    padding-top: 8em;
+    padding-top: 7em;
 }
 .contact .form-control {
     border-radius: 0;

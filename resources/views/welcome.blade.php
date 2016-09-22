@@ -13,7 +13,7 @@
     <section class="text-center">
         <div class="row">
             <div class="col-md-6 square blue">
-                <h1>Newest places</h1>
+                <h1>Newest places ...</h1>
             </div>
             <div class="col-md-3">
                 <div class="row">
@@ -45,14 +45,14 @@
                 </div>
             </div>
             <div class="col-md-6 square green">
-                <h1>Interesting places</h1>
+                <h1>Interesting places ...</h1>
             </div>
         </div>
     </section>
     <section class="text-center">
         <div class="row">
             <div class="col-md-6 square blue">
-                <h1>Old but gold</h1>
+                <h1>Old but gold ...</h1>
             </div>
             <div class="col-md-3">
                 <div class="row">
