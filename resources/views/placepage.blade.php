@@ -1,78 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Category</title>
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-
-</head>
-
-
-<body>
-<div class="container-fluid">
-    <section>
+@include('partials.header')
+    <section class="main-header place-header">
         <div class="row">
             <div class="col-lg-12">
-                <h1>Place {{$firstname}}</h1>
+                <h1>Placename</h1>
             </div>
         </div>
     </section>
-
     <section>
         <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <p>tadaaa</p>
+           <div class="col-md-8 col-md-offset-2">
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed mauris nec nisi scelerisque porttitor. Nunc quam nunc, consectetur eget mauris sed, elementum convallis dolor. Nulla at libero quam. Nulla sed pellentesque nisi. Cras fermentum mauris eget mollis semper. Suspendisse eget lorem lacinia, sollicitudin ipsum sit amet, faucibus velit. Integer et nisi id arcu elementum pellentesque. Integer sed libero eros. Sed sit amet orci et lorem tristique ultrices.
 
-            </div>
-
-            <div class="col-lg-6 col-md-6">
-                <p>Booooooooooooo</p>
-
-            </div>
+               Nunc quis purus sed justo laoreet consequat eget ac eros. Nulla justo ligula, scelerisque non velit sit amet, convallis cursus turpis. Quisque eu velit eu nisi ornare sagittis. Pellentesque interdum auctor magna, non ullamcorper enim tristique in. Nulla facilisi. Nullam elementum sapien suscipit eros blandit, quis imperdiet arcu ultrices. Maecenas interdum pharetra turpis, vitae hendrerit magna ullamcorper ut. Proin vulputate tempor lacus ac vehicula. Nulla odio diam, euismod non quam eget, sagittis congue diam. Integer mollis ligula at nisi consequat, quis scelerisque est ullamcorper. Ut id lorem et nibh mollis faucibus.
+           </div>
         </div>
-
     </section>
-
-    <section>
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <p>bbbbbbbbbbbbbb</p>
-
-            </div>
-
-            <div class="col-lg-6 col-md-6">
-
-            </div>
-        </div>
-
-    </section>
-
-    <section>
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-
-            </div>
-
-            <div class="col-lg-6 col-md-6">
-
-            </div>
-        </div>
-
-    </section>
-</div>
-
-</body>
-
-</html>
+@include('partials.footer')

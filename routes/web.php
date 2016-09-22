@@ -18,5 +18,15 @@ Route::get('/', function () {
 Route::get('/category', function () {
     return view('categorypage');
 });
+Route::get('/place', function () {
+    return view('placepage');
+});
 
-Route::get('/place', 'PageController@getName');
+Route::resource('posts','PostController');
+
+Route::get('/home', function() {
+    return view('homepage', 'PostController');
+});
+Route::get('/create-place', function() {
+    return view('place/createPlace');
+});
