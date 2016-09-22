@@ -1,3 +1,8 @@
+footer {
+    background-color: #000;
+    color: #fff;
+    height: 300px;
+}
 .container-fluid {
     padding-left: 0;
     padding-right: 0;
@@ -8,19 +13,16 @@
     background-color: #2ab27b;
     background-repeat: no-repeat;
     background-position: center;
-    position: relative;
 }
 .main-header h1 {
     color: #fff;
-    font-size: 2em;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-
+    font-size: 6em;
 }
 .square {
     height: 500px;
+}
+.square h1 {
+    color: #fff;
 }
 .blue {
     background-color: darkblue;
@@ -34,3 +36,10 @@
 .gray {
     background-color: #eee;
 }
+.contact {
+    height: 500px;
+}
+.place-header {
+    background-color: #eee;
+}
+

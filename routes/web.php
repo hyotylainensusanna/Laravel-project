@@ -19,7 +19,7 @@ Route::get('/category', function () {
     return view('categorypage');
 });
 Route::get('/place', function () {
-    return view('homepage');
+    return view('placepage');
 });
 
 Route::resource('posts','PostController');
