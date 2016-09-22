@@ -1,4 +1,5 @@
-@include('partials.header')
+@extends('main')
+@section('content')
     <section class="main-header place-header">
         <div class="row">
             <div class="col-lg-12">
@@ -13,4 +14,4 @@
            </div>
         </div>
     </section>
-@include('partials.footer')
+@endsection

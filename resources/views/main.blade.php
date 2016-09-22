@@ -22,8 +22,17 @@
 
     <!--stylesheets-->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- TODO: how to link stylesheets when some blades are in the posts directory-->
+    <link rel="stylesheet" href="/../css/style.css" />
 
 
 </head>
 <body>
 <div class="container-fluid">
+    @yield('content');
+</div>
+<footer class="text-center">
+    <h2>Company blabla</h2>
+</footer>
+</body>
+</html>

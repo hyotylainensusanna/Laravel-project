@@ -15,17 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/category', function () {
-    return view('categorypage');
-});
-Route::get('/place', function () {
-    return view('placepage');
+Route::get('/all', function () {
+    return view('all');
 });
 
 Route::resource('posts','PostController');
 
 Route::get('/home', function() {
-    return view('homepage', 'PostController');
+    return view('welcome');
 });
 Route::get('/create', function() {
     return view('posts/create');
