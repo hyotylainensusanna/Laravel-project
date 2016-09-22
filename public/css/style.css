@@ -5,6 +5,10 @@ footer {
     background-color: #0C3547;
     color: #fff;
     height: 300px;
+    padding-top: 50px;
+}
+.strong {
+    font-weight: bold;
 }
 .container-fluid {
     padding-left: 0;
@@ -45,4 +49,5 @@ footer {
 .place-header {
     background-color: #81CFD1;
 }
+
 
