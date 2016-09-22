@@ -17,7 +17,7 @@
             </div>
             <div class="col-md-3">
                 <div class="row">
-                    <div class="col-md-12 place-square gray">place1</div>
+                    <div class="col-md-12 place-square gray">Place 2</div>
                     <div class="col-md-12 place-square">place3</div>
                 </div>
             </div>
