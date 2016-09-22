@@ -1,6 +1,6 @@
 @extends('main')
 @section('content')
-    <section>
+    <section class="create-blog-post">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h1>Add a new Post</h1>

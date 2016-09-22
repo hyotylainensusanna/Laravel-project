@@ -38,10 +38,17 @@ footer {
     background-repeat: no-repeat;
     background-position: center;
 }
+.place-header {
+    height: 300px;
+}
 .main-header h1 {
     color: #fff;
     font-size: 6em;
     padding-top: 2em;
+}
+.place-header h1 {
+    height: 300px;
+    padding-top: 1em;
 }
 .main-header p.white {
     font-size: 1.4em;
@@ -89,6 +96,17 @@ p.blog-post {
 .contact .form-control .btn-group-lg>.btn, .btn-lg {
     border-radius: 0;
 }
+.create-blog-post {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.create-blog-post .form-control {
+    border-radius: 0;
+}
+.create-blog-post .form-control .btn-group-lg>.btn, .btn-lg  {
+    border-radius: 0;
+}
+
 
 
 

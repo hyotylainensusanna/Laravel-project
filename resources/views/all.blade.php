@@ -7,33 +7,34 @@
             </div>
         </div>
     </section>
-    <section>
+
+    <section class="text-center">
         <div class="row">
             <div class="col-md-6 square">
-                <h2>Place name</h2>
+                <h2>Blogpost 1</h2>
             </div>
             <div class="col-md-6 square green">
-                <h2>place name</h2>
+                <h2>Blogpost 2</h2>
             </div>
         </div>
     </section>
-    <section>
+    <section class="text-center">
         <div class="row">
             <div class="col-md-6 square green">
-                <h2>Place name</h2>
+                <h2>Blogpost 3</h2>
             </div>
             <div class="col-md-6 square ">
-                <h2>place name</h2>
+                <h2>blogpost 4</h2>
             </div>
         </div>
     </section>
-    <section>
+    <section class="text-center">
         <div class="row">
             <div class="col-md-6 square ">
-                <h2>Place name</h2>
+                <h2>blogpost 5</h2>
             </div>
             <div class="col-md-6 square green">
-                <h2>place name</h2>
+                <h2>blogpost 6</h2>
             </div>
         </div>
     </section>
