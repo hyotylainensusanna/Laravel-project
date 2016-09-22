@@ -32,7 +32,8 @@
     @yield('content');
 </div>
 <footer class="text-center">
-    <h2>Company blabla</h2>
+    <h2><span class="strong">Web Development 3</span></h2><h2>Fontys University of Applied Sciences</h2>
+    <p>Susanna Hyötyläinen ja Jenna Ahokas</p>
 </footer>
 </body>
 </html>
