@@ -47,7 +47,8 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $posts = Place::all();
+        return view('homepage.show')->withPost($posts);
     }
 
     /**
