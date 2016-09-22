@@ -27,6 +27,6 @@ Route::resource('posts','PostController');
 Route::get('/home', function() {
     return view('homepage', 'PostController');
 });
-Route::get('/create-place', function() {
-    return view('place/createPlace');
+Route::get('/create', function() {
+    return view('posts/create');
 });

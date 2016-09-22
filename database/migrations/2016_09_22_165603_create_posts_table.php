@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePlaceTable extends Migration
+class CreatePostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreatePlaceTable extends Migration
      */
     public function up()
     {
-        Schema::create('place', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('title');
+            $table->string('excerpt');
             $table->longText('description');
-            $table->string('location');
-            $table->foreign('id')->references('id')->on('gategory');
         });
     }
 
@@ -29,6 +28,6 @@ class CreatePlaceTable extends Migration
      */
     public function down()
     {
-        Schema::drop('place');
+        Schema::dropIfExists('posts');
     }
 }

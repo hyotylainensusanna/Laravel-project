@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Post;
 
 class PostController extends Controller
 {
@@ -25,7 +26,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('place.create');
     }
 
     /**
@@ -36,7 +37,19 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, array(
+            'title' => 'required|max:255',
+            'excerpt' => 'required|max:255',
+            'description' => 'required'
+    ));
+        $post = new Post;
+        $post->title = $request->title;
+        $post->excerpt = $request->excerpt;
+        $post->description = $request->description;
+
+        $post->save();
+
+        return redirect()->route('posts.show', $post->id);
     }
 
     /**
@@ -47,8 +60,8 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        $posts = Place::all();
-        return view('homepage.show')->withPost($posts);
+        $post = Post::find($id);
+        return view('posts.show')->withPost($post);
     }
 
     /**
