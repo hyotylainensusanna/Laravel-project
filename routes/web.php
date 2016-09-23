@@ -24,6 +24,11 @@ Route::resource('posts','PostController');
 Route::get('/create', function() {
     return view('posts/create');
 });
-Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Auth::routes();
+Route::get('/auth/login', 'Auth\LoginController@showLoginForm');
+Route::post('/auth/login', 'Auth\loginController@login');
+Route::get('/auth/login', 'Auth\loginController@logout');
+
