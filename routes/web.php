@@ -25,6 +25,10 @@ Route::get('/create', function() {
     return view('posts/create');
 });
 
+Route::get('/edit', function() {
+    return view('posts/create');
+});
+
 Route::get('/home', 'HomeController@index');
 
 Auth::routes();
