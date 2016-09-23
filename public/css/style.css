@@ -91,11 +91,24 @@ p.blog-post {
 .square, .place-square {
     padding-top: 7em;
 }
+a .place-square {
+    color: #000;
+}
+a .place-square:hover {
+    color: #fff;
+    text-decoration: none;
+}
 .contact .form-control {
     border-radius: 0;
 }
-.contact .form-control .btn-group-lg>.btn, .btn-lg {
+.contact input.btn.btn-lg.btn-block {
     border-radius: 0;
+    background-color: #46A7AE;
+    border: none;
+    color: #fff;
+}
+.contact input.btn.btn-lg.btn-block:hover {
+    background-color: #0C3547;
 }
 .create-blog-post {
     margin-top: 50px;
@@ -106,6 +119,10 @@ p.blog-post {
 }
 .create-blog-post .form-control .btn-group-lg>.btn, .btn-lg  {
     border-radius: 0;
+}
+.col-md-12.place-square:hover {
+    background-color: #0C3547;
+    color: #fff;
 }
 
 

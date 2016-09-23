@@ -45,6 +45,7 @@
         <ul class="nav navbar-nav">
         </ul>
         <ul class="nav navbar-nav navbar-right">
+            <li><a href="/create">Add a new blogpost</a></li>
             <li><a href="/all">All posts</a></li>
         </ul>
     </div><!-- /.navbar-collapse -->

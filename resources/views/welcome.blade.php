@@ -17,16 +17,15 @@
             </div>
             <div class="col-md-3">
                 <div class="row">
-                    <div class="col-md-12 place-square gray">Place 2</div>
-                    <div class="col-md-12 place-square">place3</div>
+                    <a href="#"><div class="col-md-12 place-square gray">place 1</div></a>
+                    <a href="#"><div class="col-md-12 place-square">place3</div></a>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="row">
-                    <div class="col-md-12 place-square">place2</div>
-                    <div class="col-md-12 place-square gray">place4</div>
+                    <a href="#"><div class="col-md-12 place-square">place2</div></a>
+                    <a href="#"><div class="col-md-12 place-square gray">place4</div></a>
                 </div>
-
             </div>
         </div>
     </section>
@@ -34,14 +33,14 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="row">
-                    <div class="col-md-12 place-square gray">place1</div>
-                    <div class="col-md-12 place-square">place3</div>
+                    <a href="#"><div class="col-md-12 place-square gray">place1</div></a>
+                    <a href="#"> <div class="col-md-12 place-square">place3</div></a>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="row">
-                    <div class="col-md-12 place-square">place2</div>
-                    <div class="col-md-12 place-square gray">place4</div>
+                    <a href="#"><div class="col-md-12 place-square">place2</div></a>
+                    <a href="#"><div class="col-md-12 place-square gray">place4</div></a>
                 </div>
             </div>
             <div class="col-md-6 square green">
@@ -56,14 +55,14 @@
             </div>
             <div class="col-md-3">
                 <div class="row">
-                    <div class="col-md-12 place-square gray">place1</div>
-                    <div class="col-md-12 place-square">place3</div>
+                    <a href="#"><div class="col-md-12 place-square gray">place1</div></a>
+                    <a href="#"> <div class="col-md-12 place-square">place3</div></a>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="row">
-                    <div class="col-md-12 place-square">place2</div>
-                    <div class="col-md-12 place-square gray">place4</div>
+                    <a href="#"><div class="col-md-12 place-square">place2</div></a>
+                    <a href="#"><div class="col-md-12 place-square gray">place4</div></a>
                 </div>
             </div>
         </div>
@@ -77,7 +76,7 @@
                     {{ Form::text('title', null, array('class' => 'form-control')) }}
                     {{ Form::label('description', 'Description: ') }}
                     {{ Form::textarea('description', null, array('class' => 'form-control')) }}
-                    {{ Form::submit('Submit', array('class' => 'btn btn-success btn-lg btn-block', 'style' => 'margin-top: 25px')) }}
+                    {{ Form::submit('Submit', array('class' => 'btn btn-lg btn-block', 'style' => 'margin-top: 25px')) }}
                 {!! Form::close() !!}
             </div>
         </div>
