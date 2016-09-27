@@ -16,7 +16,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::all();
+        return view('posts.delete')->withPosts($posts);
     }
 
     /**
@@ -26,7 +27,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('place.create');
+
     }
 
     /**
@@ -72,8 +73,8 @@ class PostController extends Controller
      */
     public function showAll()
     {
-        $allPosts = Post::all();
-        return view('welcome')->withPost($allPosts);
+        $posts = Post::all();
+        return view('all')->withPost($posts);
     }
     public function edit($id)
     {
@@ -115,6 +116,8 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+        $post->delete();
+        return redirect()->route('posts.index');
     }
 }

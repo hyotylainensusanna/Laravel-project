@@ -14,10 +14,7 @@
 Route::get('/', function() {
     return view('welcome');
 });
-
-Route::get('/all', function () {
-    return view('all');
-});
+Route::get('/show', 'PostController@showAll');
 
 Route::resource('posts','PostController');
 
