@@ -10,6 +10,7 @@
                 <div class="panel-body">
                     You are logged in!
                     <li><a href="/edit">Create a new post</a></li>
+                    <li><a href="/delete">Delete a post</a></li>
                 </div>
             </div>
         </div>
