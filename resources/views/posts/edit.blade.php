@@ -13,7 +13,8 @@
             <div class="col-md-8 col-md-offset-2">
                 {{ Form::label('title', 'Title: ') }}
                 {{ Form::text('title', null, ['class' => 'form-control input-lg']) }}
-
+                {{ Form::label('excerpt', 'Excerpt: ') }}
+                {{ Form::text('excerpt', null, array('class' => 'form-control')) }}
                 {{ Form::label('description', 'Description: ', ['class' => 'form-spacing-top']) }}
                 {{ Form::textarea('description', null, ['class' => 'form-control']) }}
                 {{ Form::submit('Submit', array('class' => 'btn btn-success btn-lg btn-block', 'style' => 'margin-top: 25px')) }}

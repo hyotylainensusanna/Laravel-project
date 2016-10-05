@@ -101,7 +101,7 @@ class PostController extends Controller
 
         $post->title = $request->input('title');
         $post->excerpt = $request->input('excerpt');
-        $post->decription = $request->input('description');
+        $post->description = $request->input('description');
 
         $post->save();
 
