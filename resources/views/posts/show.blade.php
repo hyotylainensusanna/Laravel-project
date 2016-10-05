@@ -12,6 +12,7 @@
            <div class="col-md-8 col-md-offset-2">
                <h1 class="underline">{{$post->title}}</h1>
               <p class="blog-post">{{$post->description}}</p>
+               <img src="{{ asset('images/' . $post->image) }}"/>
            </div>
         </div>
     </section>

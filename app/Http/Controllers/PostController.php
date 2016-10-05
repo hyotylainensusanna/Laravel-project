@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Post;
+use Image;
 
 class PostController extends Controller
 {
@@ -25,9 +26,10 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function posts()
     {
-
+        $posts = Post::all();
+        return view('welcome')->withPosts($posts);
     }
 
     /**
@@ -44,9 +46,20 @@ class PostController extends Controller
             'description' => 'required'
     ));
         $post = new Post;
+
         $post->title = $request->title;
         $post->excerpt = $request->excerpt;
         $post->description = $request->description;
+
+        //img
+        if($request->hasFile('image')) {
+            $image = $request->file('image');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $location = public_path('images/' . $filename);
+            Image::make($image)->resize(1000, 600)->save($location);
+
+            $post->image = $filename;
+        }
 
         $post->save();
 
@@ -71,11 +84,6 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function showAll()
-    {
-        $posts = Post::all();
-        return view('all')->withPost($posts);
-    }
     public function edit($id)
     {
         $post = Post::find($id);

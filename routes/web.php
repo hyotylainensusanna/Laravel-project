@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function() {
-    return view('welcome');
-});
-Route::get('/show', 'PostController@showAll');
+Route::get('/', 'PostController@posts');
 
 Route::resource('posts','PostController');
 
