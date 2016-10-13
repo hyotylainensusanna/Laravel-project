@@ -44,7 +44,7 @@ class PostController extends Controller
             'title' => 'required|max:255',
             'excerpt' => 'required|max:255',
             'description' => 'required'
-    ));
+        ));
         $post = new Post;
 
         $post->title = $request->title;
