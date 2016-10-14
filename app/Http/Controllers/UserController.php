@@ -14,13 +14,13 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('home')->withUser($users);
+        return view('users.show')->withUser($users);
     }
 
     public function show($id)
     {
         $user = User::find($id);
-        return view('/home')->withUser($user);
+        return view('home', ['user' => $user]);
     }
 
     /**
@@ -75,6 +75,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        $user->delete();
+        return redirect()->route('users.index');
     }
 }

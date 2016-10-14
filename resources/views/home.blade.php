@@ -8,12 +8,11 @@
                 <div class="panel-heading">Control panel</div>
 
                 <div class="panel-body">
-                    Your personal information:
-                    <h1 class="underline">{{$user->name}}</h1>
-                    <p class="blog-post">{{$user->email}}</p>
-                    <img class="img-responsive" src="{{ asset('images/' . $user->image) }}"/>
-
-
+                    @if (Gate::allows('user',$user->id) || Gate::allows('admin'))
+                        Your personal information:
+                        <h1 class="underline">{{$user->name}}</h1>
+                        <p class="blog-post">{{$user->email}}</p>
+                    @endif
                 </div>
             </div>
         </div>

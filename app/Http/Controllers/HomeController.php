@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\Post;
 
 class HomeController extends Controller
 {
@@ -21,8 +23,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view('home');
+
+    public function showAll() {
+        $posts = Post::all();
+        $users = User::all();
+
+        return view('admin')->withPosts($posts)->withUsers($users);
     }
 }
