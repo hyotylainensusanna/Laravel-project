@@ -20,11 +20,9 @@ Route::get('/create', function() {
     return view('posts/create');
 });
 
-Route::get('/edit', function() {
-    return view('posts/create');
+Route::get('/home', function() {
+    return redirect()->route('users.show', ['id' => Auth::user()->id]);
 });
-
-Route::get('/home', 'UserController@show');
 
 Auth::routes();
 Route::get('/auth/login', 'Auth\LoginController@showLoginForm');
