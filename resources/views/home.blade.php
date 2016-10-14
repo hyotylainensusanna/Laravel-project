@@ -8,9 +8,12 @@
                 <div class="panel-heading">Control panel</div>
 
                 <div class="panel-body">
-                    You are logged in!
-                    <li><a href="/edit">Create a new post</a></li>
-                    <li><a href="/posts">Delete a post</a></li>
+                    Your personal information:
+                    <h1 class="underline">{{$user->name}}</h1>
+                    <p class="blog-post">{{$user->email}}</p>
+                    <img class="img-responsive" src="{{ asset('images/' . $user->image) }}"/>
+
+
                 </div>
             </div>
         </div>

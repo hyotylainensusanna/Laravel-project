@@ -14,6 +14,7 @@
 Route::get('/', 'PostController@posts');
 
 Route::resource('posts','PostController');
+Route::resource('users','UserController');
 
 Route::get('/create', function() {
     return view('posts/create');
@@ -23,7 +24,7 @@ Route::get('/edit', function() {
     return view('posts/create');
 });
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'UserController@show');
 
 Auth::routes();
 Route::get('/auth/login', 'Auth\LoginController@showLoginForm');

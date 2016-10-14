@@ -17,18 +17,24 @@
             @for ($i = 0; $i < 4; $i++)
                 <div class="col-md-3">
                     <div class="row">
-                        <a href="{{'posts/' . $posts[$i]->id}}"><div class="col-md-12 place-square post-img" style="background-image: url({{ asset('images/' . $posts[$i]->image) }})">{{ $posts[$i]->title }}<p>{{$posts[$i]->excerpt}}</p></div></a>
+                        <a href="{{'posts/' . $posts[$i]->id}}"><div class="col-md-12 place-square">{{ $posts[$i]->title }}<p>{{$posts[$i]->excerpt}}</p></div></a>
                     </div>
                 </div>
             @endfor
         </div>
     </section>
-    <!--
     <section class="text-center">
         <div class="row">
-            <div class="col-md-6 square green">
+            <div class="col-md-6 col-md-push-6 square green">
                 <h1>Interesting places ...</h1>
             </div>
+            @for ($i = 4; $i < 8; $i++)
+                <div class="col-md-3 col-md-pull-6">
+                    <div class="row">
+                        <a href="{{'posts/' . $posts[$i]->id}}"><div class="col-md-12 place-square">{{ $posts[$i]->title }}<p>{{$posts[$i]->excerpt}}</p></div></a>
+                    </div>
+                </div>
+            @endfor
         </div>
     </section>
     <section class="text-center">
@@ -36,9 +42,15 @@
             <div class="col-md-6 square blue">
                 <h1>Old but gold ...</h1>
             </div>
+            @for ($i = 8; $i < 12; $i++)
+                <div class="col-md-3">
+                    <div class="row">
+                        <a href="{{'posts/' . $posts[$i]->id}}"><div class="col-md-12 place-square">{{ $posts[$i]->title }}<p>{{$posts[$i]->excerpt}}</p></div></a>
+                    </div>
+                </div>
+            @endfor
         </div>
     </section>
-    -->
     <section class="contact">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
