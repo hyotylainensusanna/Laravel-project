@@ -12,8 +12,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="/../public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{URL::asset('css/bootstrap.min.css')}}" />
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="/../public/js/bootstrap.min.js"></script>
@@ -23,9 +22,9 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
     <!--stylesheets-->
-    <link rel="stylesheet" href="css/style.css" />
+
     <!-- TODO: how to link stylesheets when some blades are in the posts directory-->
-    <link rel="stylesheet" href="/../css/style.css" />
+    <link rel="stylesheet" href="{{URL::asset('css/style.css')}}" />
 
 
 </head>
