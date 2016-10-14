@@ -23,7 +23,6 @@
     <!--stylesheets-->
     <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}" />
 
-
 </head>
 <body>
 <nav class="navbar navbar-default">
