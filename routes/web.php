@@ -29,6 +29,4 @@ Route::get('/auth/login', 'Auth\LoginController@showLoginForm');
 Route::post('/auth/login', 'Auth\loginController@login');
 Route::get('/auth/login', 'Auth\loginController@logout');
 
-Route::get('image-upload','ImageController@imageUpload');
-Route::post('image-upload','ImageController@imageUploadPost');
 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Post;
+use App\User;
 use Image;
 
 class PostController extends Controller
@@ -18,7 +19,8 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        return view('posts.delete')->withPosts($posts);
+        $users = User::all();
+        return view('admin')->withPosts($posts)->withUsers($users);
     }
 
     /**
