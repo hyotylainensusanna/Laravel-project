@@ -42,9 +42,16 @@
         <ul class="nav navbar-nav">
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="/login">Login</a></li>
-            <li><a href="/create">Add a new blogpost</a></li>
-            <li><a href="/posts">All posts</a></li>
+            @if (Route::has('login'))
+                @if (Auth::guest())
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/posts">All posts</a></li>
+                @else
+                    <li><a href="/create">Add a new blogpost</a></li>
+                    <li><a href="/login">Your profile</a></li>
+                    <li><a href="/posts">All posts</a></li>
+                @endif
+            @endif
         </ul>
     </div><!-- /.navbar-collapse -->
 </nav>

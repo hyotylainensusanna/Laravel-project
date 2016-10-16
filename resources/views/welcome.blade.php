@@ -51,7 +51,7 @@
             @endfor
         </div>
     </section>
-    <section class="contact">
+    <!--<section class="contact">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <h1 class="text-center">Contact us</h1>
@@ -64,5 +64,5 @@
                 {!! Form::close() !!}
             </div>
         </div>
-    </section>
+    </section>-->
 @endsection

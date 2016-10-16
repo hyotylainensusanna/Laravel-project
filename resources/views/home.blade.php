@@ -13,6 +13,8 @@
                         <img class="img-responsive" src="{{ asset('images/' . $user->image) }}"/>
                         <h1 class="underline">{{$user->name}}</h1>
                         <p class="blog-post">{{$user->email}}</p>
+                    @else
+                        <p class="alert-danger">Your have no access</p>
                     @endif
                 </div>
             </div>
