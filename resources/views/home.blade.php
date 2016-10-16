@@ -12,7 +12,11 @@
                         @if (Gate::allows('user',$user->id) || Gate::allows('admin'))
                         <div class="col-md-6">
                             <div class="profile-pic">
-                                <img class="img-responsive" src="{{ asset('images/' . $user->image) }}"/>
+                                @if($user->image != '')
+                                    <img class="img-responsive" src="{{ asset('images/' . $user->image) }}"/>
+                                @else
+                                    <img class="img-responsive" src="{{ asset('images/default/default-img.jpg) }}"/>
+                                @endif
                             </div>
                         </div>
                         <div class="col-md-6">
