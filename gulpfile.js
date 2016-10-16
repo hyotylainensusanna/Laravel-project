@@ -15,4 +15,5 @@ require('laravel-elixir-vue');
 
 elixir(function(mix) {
     mix.less('style.less');
+    mix.less('auth.less');
 });
