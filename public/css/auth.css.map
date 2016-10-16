@@ -1,1 +1,1 @@
-{"version":3,"sources":["auth.css"],"names":[],"mappings":"AAAA","file":"auth.css","sourceRoot":"/source/","sourcesContent":[]}
+{"version":3,"sources":["auth.less","auth.css"],"names":[],"mappings":"AAAA;EAEI,aAAA;EACA,gBAAA;EACA,YAAA;CCAH","file":"auth.css","sourcesContent":["body {\n  .thumb {\n    height: 40px;\n    margin-top: 4px;\n    float: left;\n  }\n\n}","body .thumb {\n  height: 40px;\n  margin-top: 4px;\n  float: left;\n}\n"],"sourceRoot":"/source/"}
