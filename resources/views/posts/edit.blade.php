@@ -10,7 +10,7 @@
                 </div>
             </div>
         </section>
-        {!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'PUT', 'data-parsley-validate' => '']) !!}
+        {!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'PUT', 'files' => true, 'data-parsley-validate' => '']) !!}
         <section class="blog-content">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
@@ -20,6 +20,8 @@
                     {{ Form::text('excerpt', null, array('class' => 'form-control', 'required' => '')) }}
                     {{ Form::label('description', 'Description: ', ['class' => 'form-spacing-top']) }}
                     {{ Form::textarea('description', null, ['class' => 'form-control', 'required' => '']) }}
+                    {{ Form::label('image', 'Upload Image: ') }}
+                    {{ Form::file('image') }}
                     {{ Form::submit('Submit', array('class' => 'btn btn-success btn-lg btn-block', 'style' => 'margin-top: 25px')) }}
 
 

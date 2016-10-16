@@ -118,6 +118,20 @@ class PostController extends Controller
         $post->excerpt = $request->input('excerpt');
         $post->description = $request->input('description');
 
+        if($request->hasFile('image')) {
+            $img = $request->file('image');
+            $filename = time() . '.' . $img->getClientOriginalExtension();
+            $location = public_path('images/' . $filename);
+            $image = Image::make($img);
+
+            $watermark = Image::make('279a7cd0-c14c-476c-a19d-c1b264eef942.jpg');
+            $image->insert($watermark);
+            $image->save($location);
+            $image->resize(600,400);
+
+            $post->image = $filename;
+        }
+
         $post->save();
 
         return redirect()->route('posts.show', $post->id);
