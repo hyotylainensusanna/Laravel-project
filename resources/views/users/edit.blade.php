@@ -6,7 +6,7 @@
     <section class="main-header place-header text-center">
         <div class="row">
             <div class="col-lg-12">
-                <h1>Edit a user</h1>
+                <h1>Edit your profile</h1>
             </div>
         </div>
     </section>

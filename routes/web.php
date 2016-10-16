@@ -37,3 +37,5 @@ Route::get('/postsToExcel', 'PostController@toExcel');
 
 Route::resource('postsAPI','PostApiController');
 Route::resource('usersAPI','UserApiController');
+
+Route::get('/uploadImage', 'UserController@uploadImage');

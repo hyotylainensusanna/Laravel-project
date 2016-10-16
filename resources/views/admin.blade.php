@@ -20,7 +20,6 @@
                 <h1>Create</h1>
                 <br>
                 <a class="btn btn-success" href="/create">Create a new blogpost</a>
-                <a class="btn btn-success" href="/register">Register an User</a>
             </div>
         </div>
     </section>

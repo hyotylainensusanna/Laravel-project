@@ -80,6 +80,27 @@ class UserController extends Controller
 
         return redirect()->route('users.show', $user->id);
     }
+    public function uploadImage(Request $request, $id) {
+
+        $user = User::find($id);
+
+        $img = $request->file('image');
+        $filename = time() . '.' . $img->getClientOriginalExtension();
+        $location = public_path('images/' . $filename);
+        $image = Image::make($img);
+
+        $watermark = Image::make('279a7cd0-c14c-476c-a19d-c1b264eef942.jpg');
+        $image->insert($watermark, 'bottom-right');
+        $image->save($location);
+        $image->resize(600,400);
+
+        $user->image = $filename;
+
+
+        $user->save();
+
+        return redirect()->route('users.show', $user->id);
+    }
 
     /**
      * Remove the specified resource from storage.
