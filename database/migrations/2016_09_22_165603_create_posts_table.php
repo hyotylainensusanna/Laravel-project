@@ -18,6 +18,8 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->string('excerpt');
             $table->longText('description');
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 
