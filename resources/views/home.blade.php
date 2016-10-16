@@ -10,6 +10,7 @@
                 <div class="panel-body">
                     @if (Gate::allows('user',$user->id) || Gate::allows('admin'))
                         Your personal information:
+                        <img class="img-responsive" src="{{ asset('images/' . $user->image) }}"/>
                         <h1 class="underline">{{$user->name}}</h1>
                         <p class="blog-post">{{$user->email}}</p>
                     @endif

@@ -42,6 +42,13 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+
+    /**
+     * @param Request $request
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function update(Request $request, $id)
     {
         $this->validate($request, array(
@@ -54,10 +61,15 @@ class UserController extends Controller
 
         //img
         if($request->hasFile('image')) {
-            $image = $request->file('image');
-            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $img = $request->file('image');
+            $filename = time() . '.' . $img->getClientOriginalExtension();
             $location = public_path('images/' . $filename);
-            Image::make($image)->resize(1000, 600)->save($location);
+            $image = Image::make($img);
+
+            $watermark = Image::make('279a7cd0-c14c-476c-a19d-c1b264eef942.jpg');
+            $image->insert($watermark, 'bottom-right');
+            $image->save($location);
+            $image->resize(600,400);
 
             $user->image = $filename;
         }
