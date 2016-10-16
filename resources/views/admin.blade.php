@@ -28,7 +28,8 @@
                     @endforeach
                         <div class="row">
                             <div class="col-md-8" style="margin-top:10px">
-                                <a href="{{ url('/posts/pdf') }}" class="btn btn-success">Export to PDF</a>
+                                <a href="{{ url('/postsToPDF') }}" class="btn btn-success">Export to PDF</a>
+                                <a href="{{ url('/postsToExcel') }}" class="btn btn-success">Export to Excel</a>
                             </div>
                         </div>
                 @endif
@@ -56,7 +57,8 @@
                     @endforeach
                 <div class="row">
                     <div class="col-md-8" style="margin-top:10px">
-                        <a href="{{ url('/users/pdf') }}" class="btn btn-success">Export to PDF</a>
+                        <a href="{{ url('/usersToPDF') }}" class="btn btn-success">Export to PDF</a>
+                        <a href="{{ url('/usersToExcel') }}" class="btn btn-success">Export to Excel</a>
                     </div>
                 </div>
                 @endif

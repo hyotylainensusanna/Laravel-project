@@ -4,9 +4,79 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5902033f0e6e1445ae0c8dc00249ffa4",
-    "content-hash": "c31896ea246dcdf68636ee6a49a7c6b6",
+    "hash": "00a26188fccdb94a1680b10c39a03042",
+    "content-hash": "78abaf8eb2f1d7f767725f40a9f53f53",
     "packages": [
+        {
+            "name": "alt-three/bus",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AltThree/Bus.git",
+                "reference": "cf98cf46654491c4f9f286ab32dd72fb6eb446cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AltThree/Bus/zipball/cf98cf46654491c4f9f286ab32dd72fb6eb446cc",
+                "reference": "cf98cf46654491c4f9f286ab32dd72fb6eb446cc",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/bus": "5.3.*",
+                "illuminate/container": "5.3.*",
+                "illuminate/contracts": "5.3.*",
+                "illuminate/pipeline": "5.3.*",
+                "illuminate/support": "5.3.*",
+                "php": ">=5.6.4"
+            },
+            "require-dev": {
+                "graham-campbell/testbench": "^3.1",
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "AltThree\\Bus\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                },
+                {
+                    "name": "James Brooks",
+                    "email": "james@alt-three.com"
+                },
+                {
+                    "name": "Graham Campbell",
+                    "email": "graham@alt-three.com"
+                },
+                {
+                    "name": "Joseph Cohen",
+                    "email": "joe@alt-three.com"
+                }
+            ],
+            "description": "An improved command bus for Laravel 5.2+",
+            "keywords": [
+                "Alt Three",
+                "bus",
+                "command",
+                "command bus",
+                "job"
+            ],
+            "time": "2016-08-25 10:38:17"
+        },
         {
             "name": "barryvdh/laravel-dompdf",
             "version": "v0.7.0",
@@ -662,6 +732,55 @@
                 "laravel"
             ],
             "time": "2016-10-08 01:51:20"
+        },
+        {
+            "name": "laravelcollective/bus",
+            "version": "v5.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LaravelCollective/bus.git",
+                "reference": "720298af5ddaa09e1ddb846d02c2a911e92c3574"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LaravelCollective/bus/zipball/720298af5ddaa09e1ddb846d02c2a911e92c3574",
+                "reference": "720298af5ddaa09e1ddb846d02c2a911e92c3574",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/container": "5.3.*",
+                "illuminate/contracts": "5.3.*",
+                "illuminate/pipeline": "5.3.*",
+                "illuminate/support": "5.3.*",
+                "php": ">=5.6.4"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.4",
+                "phpunit/phpunit": "~5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Collective\\Bus\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                },
+                {
+                    "name": "Adam Engebretson",
+                    "email": "adam@laravelcollective.com"
+                }
+            ],
+            "description": "The Laravel Bus (5.1) package for use in Laravel 5.3.",
+            "homepage": "http://laravelcollective.com",
+            "time": "2016-08-28 00:02:50"
         },
         {
             "name": "laravelcollective/html",

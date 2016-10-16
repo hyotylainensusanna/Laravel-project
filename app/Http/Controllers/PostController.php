@@ -9,6 +9,7 @@ use App\Post;
 use App\User;
 use Image;
 use PDF;
+use Excel;
 
 class PostController extends Controller
 {
@@ -136,9 +137,27 @@ class PostController extends Controller
         $post->delete();
         return redirect()->route('posts.index');
     }
-    public function toPDF() {
+
+    public function toPDF()
+    {
         $posts = Post::all();
         $pdf = PDF::loadView('posts.export',['posts' => $posts]);
-        return $pdf->download('Pdf posts.pdf');
+        return $pdf->download('blogposts.pdf');
+    }
+    public function toExcel()
+    {
+        Excel::create('Blogposts', function ($excel) {
+            $excel->sheet('blogposts', function ($sheet) {
+                $data = [];
+                array_push($data, array('Id', 'Title', 'Excerpt', 'Description'));
+                $sheet->fromArray($data, null, "A1", false, false);
+                $posts = Post::all();
+                foreach ($posts as $post) {
+                    $data = [];
+                    array_push($data, array($post->id, $post->title, $post->excerpt, $post->description));
+                    $sheet->fromArray($data, null, "A1", false, false);
+                }
+            });
+        })->download('xlsx');
     }
 }
