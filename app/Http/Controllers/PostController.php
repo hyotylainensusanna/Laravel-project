@@ -62,14 +62,18 @@ class PostController extends Controller
             $location = public_path('images/' . $filename);
             $image = Image::make($img);
 
-            $image2 = $image->copy();
-            $image2->pixelate(5);
-            $image2->save(storage_path() . 'images/pixelated' . $image->image);
-
             $watermark = Image::make('279a7cd0-c14c-476c-a19d-c1b264eef942.jpg');
             $image->insert($watermark, 'bottom-right');
+            $image->resize(600, null);
             $image->save($location);
-            $image->resize(600,400);
+
+            $img2 = $request->file('image');
+            $filename2 = time() . '.' . $img2->getClientOriginalExtension();
+            $location2 = public_path('images/pixelated' . $filename2);
+            $image2 = Image::make($img2);
+            $image2->resize(600, null);
+            $image2->pixelate(12);
+            $image2->save($location2);
 
             $post->image = $filename;
         }
@@ -133,7 +137,7 @@ class PostController extends Controller
             $watermark = Image::make('279a7cd0-c14c-476c-a19d-c1b264eef942.jpg');
             $image->insert($watermark, 'bottom-right');
             $image->save($location);
-            $image->resize(600,400);
+            $image->resize(600, null);
 
             $post->image = $filename;
         }

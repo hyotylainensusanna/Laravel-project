@@ -71,11 +71,11 @@ class UserController extends Controller
             $watermark = Image::make('279a7cd0-c14c-476c-a19d-c1b264eef942.jpg');
             $image->insert($watermark, 'bottom-right');
             $image->save($location);
-            $image->resize(600,400);
+            $image->resize(600, null);
 
             $img2 = $request->file('image');
             $filename2 = time() . '.' . $img2->getClientOriginalExtension();
-            $location2 = public_path('images/thumbs' . $filename);
+            $location2 = public_path('images/thumbs' . $filename2);
             $image2 = Image::make($img2);
             $image2->resize(50, 50);
             $image2->save($location2);

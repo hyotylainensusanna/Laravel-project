@@ -20,8 +20,9 @@
                             <h2 class="underline">{{$user->name}}</h2>
                             <p class="blog-post">{{$user->email}}</p>
                             @if (Gate::allows('admin'))
-                                <h2>Go to <a href="/posts">Admin panel</a></h2>
-
+                                <h2><a class="btn btn-success" href="/posts">Admin panel</a></h2>
+                            @elseif (Gate::allows('user', $user->id))
+                                <h2><a class="btn btn-success" href="/posts">Edit and view posts</a></h2>
                             @endif
                         </div>
                         @else

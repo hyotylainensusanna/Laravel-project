@@ -12,8 +12,19 @@
            <div class="col-md-8 col-md-offset-2">
                <h1 class="underline">{{$post->title}}</h1>
               <p class="blog-post">{{$post->description}}</p>
-               <img src="{{ asset('images/' . $post->image) }}"/>
+               @if($post->image != '')
+                   <img id="normal" src="{{ asset('images/' . $post->image) }}" onmouseover="showHide(this, 'pixelate')"/>
+                   <img id="pixelate" src="{{ asset('images/pixelated' . $post->image) }}" onmouseout="showHide(this, 'normal')"/>
+               @endif
            </div>
         </div>
     </section>
+    <script>
+        $('#pixelate').hide();
+        function showHide(a,b){
+            a.style.display = 'none';
+            b=document.getElementById(b);
+            b.style.display = 'block';
+        }
+    </script>
 @endsection
