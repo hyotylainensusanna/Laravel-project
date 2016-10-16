@@ -62,8 +62,12 @@ class PostController extends Controller
             $location = public_path('images/' . $filename);
             $image = Image::make($img);
 
+            $image2 = $image->copy();
+            $image2->pixelate(5);
+            $image2->save(storage_path() . 'images/pixelated' . $image->image);
+
             $watermark = Image::make('279a7cd0-c14c-476c-a19d-c1b264eef942.jpg');
-            $image->insert($watermark);
+            $image->insert($watermark, 'bottom-right');
             $image->save($location);
             $image->resize(600,400);
 
@@ -127,7 +131,7 @@ class PostController extends Controller
             $image = Image::make($img);
 
             $watermark = Image::make('279a7cd0-c14c-476c-a19d-c1b264eef942.jpg');
-            $image->insert($watermark);
+            $image->insert($watermark, 'bottom-right');
             $image->save($location);
             $image->resize(600,400);
 
