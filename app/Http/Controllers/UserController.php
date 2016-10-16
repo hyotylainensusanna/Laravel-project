@@ -75,7 +75,7 @@ class UserController extends Controller
 
             $img2 = $request->file('image');
             $filename2 = time() . '.' . $img2->getClientOriginalExtension();
-            $location2 = public_path('images/thumbs' . $filename2);
+            $location2 = public_path('images/thumbs/' . $filename2);
             $image2 = Image::make($img2);
             $image2->resize(50, 50);
             $image2->save($location2);

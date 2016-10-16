@@ -13,7 +13,7 @@
                         <div class="col-md-6">
                             <div class="profile-pic">
                                 @if(Auth::user()->image != '')
-                                    <img class="thumb img-circle" src="{{ asset('images/thumbs' . Auth::user()->image) }}"/>
+                                    <img class="thumb img-circle" src="{{ asset('images/thumbs/' . Auth::user()->image) }}"/>
                                 @else
                                     <img class="thumb img-circle" src="{{ url('images/thumbs/default/default-img.jpg') }}"/>
                                 @endif

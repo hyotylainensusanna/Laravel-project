@@ -141,7 +141,7 @@ class PostController extends Controller
 
             $img2 = $request->file('image');
             $filename2 = time() . '.' . $img2->getClientOriginalExtension();
-            $location2 = public_path('images/pixelated' . $filename2);
+            $location2 = public_path('images/pixelated/' . $filename2);
             $image2 = Image::make($img2);
             $image2->resize(600, null);
             $image2->pixelate(12);
