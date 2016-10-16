@@ -46,9 +46,12 @@
                 @if (Auth::guest())
                     <li><a href="/login">Login</a></li>
                     <li><a href="/posts">All posts</a></li>
-                @else
+                    @elseif(Gate::allows('admin'))
+                        <li><a href="/login">Your profile</a></li>
+                        <li><a href="/posts">Admin panel</a></li>
+                        @else
                     <li><a href="/login">Your profile</a></li>
-                    <li><a href="/posts">Admin panel</a></li>
+                    <li><a href="/posts">Edit and view posts</a></li>
                 @endif
             @endif
         </ul>
