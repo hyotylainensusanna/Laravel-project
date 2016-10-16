@@ -128,5 +128,8 @@ body .section-padding {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+body .thumb {
+  height: 50px;
+}
 
 /*# sourceMappingURL=style.css.map */
