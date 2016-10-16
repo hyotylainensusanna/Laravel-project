@@ -41,16 +41,17 @@ body .container-fluid .square {
 }
 body .container-fluid .square h1 {
   color: #fff;
+  margin-top: 4em;
 }
 body .container-fluid .place-square {
   height: 250px;
 }
 body .container-fluid .square,
 body .container-fluid .place-square {
-  padding-top: 7em;
+  padding-top: 3em;
 }
 body .container-fluid .col-md-12.place-square:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #0C3547;
   color: #fff;
 }
 body .container-fluid .blue {

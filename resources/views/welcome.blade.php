@@ -17,7 +17,7 @@
             @for ($i = 0; $i < 4; $i++)
                 <div class="col-md-3">
                     <div class="row">
-                        <a href="{{'posts/' . $posts[$i]->id}}"><div class="col-md-12 place-square">{{ $posts[$i]->title }}<p>{{$posts[$i]->excerpt}}</p></div></a>
+                        <a href="{{'posts/' . $posts[$i]->id}}"><div class="col-md-12 place-square"><h2>{{ $posts[$i]->title }}</h2><p class="small">{{$posts[$i]->excerpt}}</p></div></a>
                     </div>
                 </div>
             @endfor
@@ -31,7 +31,7 @@
             @for ($i = 4; $i < 8; $i++)
                 <div class="col-md-3 col-md-pull-6">
                     <div class="row">
-                        <a href="{{'posts/' . $posts[$i]->id}}"><div class="col-md-12 place-square">{{ $posts[$i]->title }}<p>{{$posts[$i]->excerpt}}</p></div></a>
+                        <a href="{{'posts/' . $posts[$i]->id}}"><div class="col-md-12 place-square"><h2>{{ $posts[$i]->title }}</h2><p class="small">{{$posts[$i]->excerpt}}</p></div></a>
                     </div>
                 </div>
             @endfor
@@ -45,7 +45,7 @@
             @for ($i = 8; $i < 12; $i++)
                 <div class="col-md-3">
                     <div class="row">
-                        <a href="{{'posts/' . $posts[$i]->id}}"><div class="col-md-12 place-square">{{ $posts[$i]->title }}<p>{{$posts[$i]->excerpt}}</p></div></a>
+                        <a href="{{'posts/' . $posts[$i]->id}}"><div class="col-md-12 place-square"><h2>{{ $posts[$i]->title }}</h2><p class="small">{{$posts[$i]->excerpt}}</p></div></a>
                     </div>
                 </div>
             @endfor

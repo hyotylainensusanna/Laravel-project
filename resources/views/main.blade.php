@@ -47,9 +47,8 @@
                     <li><a href="/login">Login</a></li>
                     <li><a href="/posts">All posts</a></li>
                 @else
-                    <li><a href="/create">Add a new blogpost</a></li>
                     <li><a href="/login">Your profile</a></li>
-                    <li><a href="/posts">All posts</a></li>
+                    <li><a href="/posts">Admin panel</a></li>
                 @endif
             @endif
         </ul>

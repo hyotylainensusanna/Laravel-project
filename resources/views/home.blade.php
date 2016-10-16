@@ -19,6 +19,10 @@
                             <h1>Your personal information:</h1>
                             <h2 class="underline">{{$user->name}}</h2>
                             <p class="blog-post">{{$user->email}}</p>
+                            @if (Gate::allows('admin'))
+                                <h2>Go to <a href="/posts">Admin panel</a></h2>
+
+                            @endif
                         </div>
                         @else
                             <p class="alert-danger">Your have no access</p>

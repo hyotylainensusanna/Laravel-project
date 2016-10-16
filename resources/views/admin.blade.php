@@ -27,13 +27,16 @@
     <section class="create-blog-post">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h1>Posts</h1>
                 @if(Auth::guest())
                     @foreach ($posts as $post)
                         <h2><span>{{ $post->id}}. </span>{{ $post->title }}</h2>
                         <p>{{ $post->description }}</p>
                     @endforeach
                 @else
+                    <h1>All Posts</h1>
+                    <a href="{{ url('/postsToPDF') }}" class="btn btn-success">Export to PDF</a>
+                    <a href="{{ url('/postsToExcel') }}" class="btn btn-success">Export to Excel</a>
+                    <a href="{{ url('/postsAPI') }}" class="btn btn-success">Posts API</a>
                     @foreach ($posts as $post)
                         {!! Form::model($post, ['route' => ['posts.destroy', $post->id], 'method' => 'DELETE']) !!}
                         <h2><span>{{ $post->id}}. </span>{{ $post->title }}</h2>
@@ -43,12 +46,6 @@
                         {!! Form::submit('Delete', ['class'=>'btn btn-danger']) !!}
                         {!! Form::close()!!}
                     @endforeach
-                        <div class="row">
-                            <div class="col-md-8" style="margin-top:10px">
-                                <a href="{{ url('/postsToPDF') }}" class="btn btn-success">Export to PDF</a>
-                                <a href="{{ url('/postsToExcel') }}" class="btn btn-success">Export to Excel</a>
-                            </div>
-                        </div>
                 @endif
             </div>
         </div>
@@ -56,13 +53,13 @@
     <section class="create-blog-post">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h1>Users</h1>
                 @if(Auth::guest())
-                    @foreach ($users as $user)
-                        <h2><span>{{ $user->id}}. </span>{{ $user->name }}</h2>
-                        <p>{{ $user->email }}</p>
-                    @endforeach
+
                 @else
+                    <h1>All Users</h1>
+                    <a href="{{ url('/usersToPDF') }}" class="btn btn-success">Export to PDF</a>
+                    <a href="{{ url('/usersToExcel') }}" class="btn btn-success">Export to Excel</a>
+                    <a href="{{ url('/usersAPI') }}" class="btn btn-success">Users API</a>
                     @foreach ($users as $user)
                         {!! Form::model($user, ['route' => ['users.destroy', $user->id], 'method' => 'DELETE']) !!}
                         <h2><span>{{ $user->id}}. </span>{{ $user->name }}</h2>
@@ -72,12 +69,6 @@
                         {!! Form::submit('Delete', ['class'=>'btn btn-danger']) !!}
                         {!! Form::close()!!}
                     @endforeach
-                <div class="row">
-                    <div class="col-md-8" style="margin-top:10px">
-                        <a href="{{ url('/usersToPDF') }}" class="btn btn-success">Export to PDF</a>
-                        <a href="{{ url('/usersToExcel') }}" class="btn btn-success">Export to Excel</a>
-                    </div>
-                </div>
                 @endif
             </div>
         </div>
