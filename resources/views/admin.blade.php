@@ -9,7 +9,7 @@
                 @if(Gate::allows('admin'))
                     <h1>Admin panel</h1>
                 @else
-                    <h1>Edit and view posts</h1>
+                    <h1>Create, edit and view posts</h1>
                 @endif
 
 

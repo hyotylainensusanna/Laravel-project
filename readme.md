@@ -1,5 +1,7 @@
 # Web Development 3 - Laravel Application
 
+<img src="/images/"/>
+
 ## Project idea
 
 This project is a blog about interesting places in Eindhoven.
@@ -7,7 +9,7 @@ This project is a blog about interesting places in Eindhoven.
 
 ### We are using Less
 
-The project uses LESS as a CSS pre-processor. Read more about LESS:http://lesscss.org/
+The project uses LESS as a CSS pre-processor. Read more about LESS: http://lesscss.org/
 
 ### Authorization
 

@@ -13,8 +13,10 @@
                <h1 class="underline">{{$post->title}}</h1>
               <p class="blog-post">{{$post->description}}</p>
                @if($post->image != '')
-                   <img id="normal" src="{{ asset('images/' . $post->image) }}" onmouseover="showHide(this, 'pixelate')"/>
-                   <img id="pixelate" src="{{ asset('images/pixelated' . $post->image) }}" onmouseout="showHide(this, 'normal')"/>
+                   <img id="normal" class="img-responsive" src="{{ asset('images/' . $post->image) }}" onmouseover="showHide(this, 'pixelate')"/>
+                   <img id="pixelate" class="img-responsive" src="{{ asset('images/pixelated/' . $post->image) }}" onmouseout="showHide(this, 'normal')"/>
+               @else
+                   <img class="img-responsive" src="{{ asset('images/default/default-img-posts.jpg') }}"/>
                @endif
            </div>
         </div>

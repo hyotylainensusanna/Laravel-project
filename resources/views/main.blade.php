@@ -51,7 +51,7 @@
                         <li><a href="/posts">Admin panel</a></li>
                         @else
                     <li><a href="/login">Your profile</a></li>
-                    <li><a href="/posts">Edit and view posts</a></li>
+                    <li><a href="/posts">Create, edit and view posts</a></li>
                 @endif
             @endif
         </ul>
