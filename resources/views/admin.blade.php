@@ -3,10 +3,28 @@
     <section class="main-header place-header text-center">
         <div class="row">
             <div class="col-lg-12">
-                <h1>All posts</h1>
+                @if(Auth::guest())
+                    <h1>All posts</h1>
+                @else
+                    <h1>Admin panel</h1>
+                @endif
             </div>
         </div>
     </section>
+    @if(Auth::guest())
+
+    @else
+    <section>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1>Create</h1>
+                <br>
+                <a class="btn btn-success" href="/create">Create a new blogpost</a>
+                <a class="btn btn-success" href="/register">Register an User</a>
+            </div>
+        </div>
+    </section>
+    @endif
     <section class="create-blog-post">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
