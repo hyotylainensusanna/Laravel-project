@@ -54,7 +54,7 @@
                         <li><a href="{{ url('/register') }}">Register</a></li>
                     @else
                         @if(Auth::user()->image != '')
-                            <img class="thumb img-circle" src="{{ asset('images/thumbs' . Auth::user()->image) }}"/>
+                            <img class="thumb img-circle" src="{{ url('images/thumbs/' . Auth::user()->image) }}"/>
                         @else
                             <img class="thumb img-circle" src="{{ url('images/thumbs/default/default-img.jpg') }}"/>
                         @endif

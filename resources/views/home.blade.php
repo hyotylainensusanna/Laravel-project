@@ -13,7 +13,7 @@
                         <div class="col-md-6">
                             <div class="profile-pic">
                                 @if($user->image != '')
-                                    <img class="img-responsive" src="{{ assets('images/' . $user->image) }}"/>
+                                    <img class="img-responsive" src="{{ url('images/' . $user->image) }}"/>
                                 @else
                                     <img class="img-responsive" src="{{ url('images/default/default-img.jpg') }}"/>
                                 @endif
