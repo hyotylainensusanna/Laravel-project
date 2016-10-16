@@ -12,10 +12,10 @@
                         @if (Gate::allows('user',$user->id) || Gate::allows('admin'))
                         <div class="col-md-6">
                             <div class="profile-pic">
-                                @if($user->image != '')
-                                    <img class="img-responsive" src="{{ asset('images/' . $user->image) }}"/>
+                                @if(Auth::user()->image != '')
+                                    <img class="thumb img-circle" src="{{ asset('images/thumbs' . Auth::user()->image) }}"/>
                                 @else
-                                    <img class="img-responsive" src="{{ asset('images/default/default-img.jpg) }}"/>
+                                    <img class="thumb img-circle" src="{{ url('images/thumbs/default/default-img.jpg') }}"/>
                                 @endif
                             </div>
                         </div>
