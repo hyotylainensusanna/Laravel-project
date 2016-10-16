@@ -1,7 +1,5 @@
 # Web Development 3 - Laravel Application
 
-<img src="/images/"/>
-
 ## Project idea
 
 This project is a blog about interesting places in Eindhoven.
@@ -26,6 +24,11 @@ Admin can **CRUD** all content
 User can **CRU** content
 
 Guest can **R** content
+
+##### Pixelate
+
+Pixelate **works**, but only if you add a new image to a blog post,
+because with default images, we don't have pixelated copies.
 
 #### **Group members:**
 
