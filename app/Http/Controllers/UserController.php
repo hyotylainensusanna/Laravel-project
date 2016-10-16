@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use Image;
-use Dompdf\Dompdf;
 use PDF;
 
 class UserController extends Controller
@@ -83,7 +82,7 @@ class UserController extends Controller
     }
     public function toPDF() {
         $users = User::all();
-        $pdf = PDF::loadView('users.pdf',['users' => $users]);
+        $pdf = PDF::loadView('users.export',['users' => $users]);
         return $pdf->download('Pdf users.pdf');
     }
 }

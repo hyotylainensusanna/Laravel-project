@@ -26,6 +26,11 @@
                         {!! Form::submit('Delete', ['class'=>'btn btn-danger']) !!}
                         {!! Form::close()!!}
                     @endforeach
+                        <div class="row">
+                            <div class="col-md-8" style="margin-top:10px">
+                                <a href="{{ url('/posts/pdf') }}" class="btn btn-success">Export to PDF</a>
+                            </div>
+                        </div>
                 @endif
             </div>
         </div>
@@ -51,7 +56,7 @@
                     @endforeach
                 <div class="row">
                     <div class="col-md-8" style="margin-top:10px">
-                        <a href="{{ url('/pdf') }}" class="btn btn-success">Export to PDF</a>
+                        <a href="{{ url('/users/pdf') }}" class="btn btn-success">Export to PDF</a>
                     </div>
                 </div>
                 @endif

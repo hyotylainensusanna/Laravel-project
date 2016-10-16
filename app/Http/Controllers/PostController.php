@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Post;
 use App\User;
 use Image;
+use PDF;
 
 class PostController extends Controller
 {
@@ -129,5 +130,10 @@ class PostController extends Controller
         $post = Post::find($id);
         $post->delete();
         return redirect()->route('posts.index');
+    }
+    public function toPDF() {
+        $posts = Post::all();
+        $pdf = PDF::loadView('posts.export',['posts' => $posts]);
+        return $pdf->download('Pdf posts.pdf');
     }
 }
