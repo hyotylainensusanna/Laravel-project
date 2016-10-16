@@ -29,6 +29,11 @@ Route::get('/auth/login', 'Auth\LoginController@showLoginForm');
 Route::post('/auth/login', 'Auth\loginController@login');
 Route::get('/auth/login', 'Auth\loginController@logout');
 
-Route::get('/pdf', 'UserController@toPDF');
+Route::get('/usersToPDF', 'UserController@toPDF');
+Route::get('/postsToPDF', 'PostController@toPDF');
 
+Route::get('/usersToExcel', 'UserController@toExcel');
+Route::get('/postsToExcel', 'PostController@toExcel');
 
+Route::resource('postsAPI','PostApiController');
+Route::resource('usersAPI','UserApiController');

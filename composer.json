@@ -8,10 +8,13 @@
         "php": ">=5.6.4",
         "laravel/framework": "5.3.*",
         "laravelcollective/html": "5.3.*",
+        "laravelcollective/bus": "5.3.*",
         "intervention/image": "^2.3",
         "twbs/bootstrap": "^3.3",
         "dompdf/dompdf": "^0.7.0",
-        "barryvdh/laravel-dompdf": "^0.7.0"
+        "barryvdh/laravel-dompdf": "^0.7.0",
+        "maatwebsite/excel": "~2.1.0",
+        "alt-three/bus": "^2.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use Image;
-use Dompdf\Dompdf;
 use PDF;
+use Excel;
 
 class UserController extends Controller
 {
@@ -95,7 +95,24 @@ class UserController extends Controller
     }
     public function toPDF() {
         $users = User::all();
-        $pdf = PDF::loadView('users.pdf',['users' => $users]);
-        return $pdf->download('Pdf users.pdf');
+        $pdf = PDF::loadView('users.export',['users' => $users]);
+        return $pdf->download('blogusers.pdf');
+    }
+
+    public function toExcel()
+    {
+        Excel::create('Users of the Blog', function ($excel) {
+            $excel->sheet('blogusers', function ($sheet) {
+                $data = [];
+                array_push($data, array('Id', 'Name', 'Email', 'Role'));
+                $sheet->fromArray($data, null, "A1", false, false);
+                $users = User::all();
+                foreach ($users as $user) {
+                    $data = [];
+                    array_push($data, array($user->id, $user->name, $user->email, $user->role));
+                    $sheet->fromArray($data, null, "A1", false, false);
+                }
+            });
+        })->download('xlsx');
     }
 }
